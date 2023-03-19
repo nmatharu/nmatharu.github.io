@@ -39,7 +39,6 @@
 @import url("font-awesome/css/font-awesome.min.css");
 @import url("micons/micons.css");
 
-
 /** 
  * ===================================================================
  * 02. base style overrides - (_document-setup.scss)
@@ -71,11 +70,61 @@ html, body {
 }
 body {
 	background: #151515;
+	/* background: #151515; */
 	font-family: "poppins-regular", serif;
 	font-size: 1.7rem;
 	line-height: 3rem;
 	color: #6e6e6e;
 }
+
+.beegicon {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #2e2e2e transparent;
+  }
+
+  ::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+  }
+  ::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+	background: #666666;
+	border: 4px solid #151515;
+	border-radius: 100px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+	background: #000000;
+  }
+  ::-webkit-scrollbar-thumb:active {
+	background: #bf3131;
+  }
+  ::-webkit-scrollbar-track {
+	background: #ffffff00;
+	border-radius: 100px;
+  }
+  ::-webkit-scrollbar-track:hover {
+	background: #66666600;
+  }
+  ::-webkit-scrollbar-track:active {
+	background: #33333300;
+  }
+  ::-webkit-scrollbar-corner {
+	background: transparent;
+  }
 
 /**
  * links - (_document-setup.scss)
@@ -1106,7 +1155,11 @@ header .row {
 }
 header .top-bar {
 	display: block;
+
+	/* background: #000000; */
 	background: #000000;
+	/* border-radius: 10px; */
+
 	min-width: 220px;
 	min-height: 66px;
 	position: absolute;
@@ -1329,7 +1382,8 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #111111;
-	opacity: .85;
+	/* opacity: .85; */
+	opacity: .9;
 }
 
 .intro-content {
@@ -1404,13 +1458,16 @@ header .logo a {
 }
 .intro-content .button::after {
 	display: inline-block;
-	content: "\f107";
 	font-family: fontAwesome;
 	font-size: 1.6rem;
 	line-height: inherit;
 	text-align: center;
 	position: relative;
 	left: 1.2rem;
+}
+
+.downarrow::after {
+	content: "\f107";
 }
 
 .intro-social {
@@ -1491,7 +1548,7 @@ header .logo a {
 		padding: 0 .6rem;
 	}
 	.intro-content .intro-position span::before, .intro-content .intro-position span::after {
-		display: none !important;
+		/* display: none !important; */
 	}
 	.intro-social {
 		font-size: 2.4rem;
