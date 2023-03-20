@@ -2243,7 +2243,27 @@ h3.portfolio-service-title {
 	text-transform: uppercase;
 	font-family: "poppins-semibold", sans-serif;
 	margin-top: 0.5rem;
+	margin-bottom: 0;
 	letter-spacing: 0.15rem;
+}
+.portfolio-service-date {
+	color: #FF0077;
+}
+.portfolio-service-topics {
+	color: white;
+	margin-bottom: 1rem;
+	margin-top: 1.5rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+.portfolio-service-desc {
+	font-size: 1.4rem;
+}
+.more-button-wrapper {
+	display: contents;
+}
+.no-x-margins {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 /* pagination */
@@ -2344,6 +2364,8 @@ h3.portfolio-service-title {
  */
 #contact {
 	background: #151515;
+	/* background: #151515 url(../images/test.webp) no-repeat center bottom; */
+	/* background-size: cover; */
 	padding-top: 12rem;
 	padding-bottom: 7.2rem;
 }
@@ -2355,6 +2377,12 @@ h3.portfolio-service-title {
 }
 #contact .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
+}
+#contact a {
+	color: #FF0077;
+}
+#contact a:hover {
+	color: white;
 }
 
 /* contact form */
