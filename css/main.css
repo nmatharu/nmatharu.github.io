@@ -1732,7 +1732,8 @@ header .logo a {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.1);
 	position: absolute;
-	left: 35%;
+	/* left: 35%; */
+	left: 50%;
 	top: 0;
 }
 #resume .timeline-block {
@@ -1748,7 +1749,8 @@ header .logo a {
 	text-align: center;
 	color: #FFFFFF;
 	position: absolute;
-	left: 35%;
+	/* left: 35%; */
+	left: 50%;
 	top: .9rem;
 	margin-left: -2.4rem;
 }
@@ -1760,7 +1762,8 @@ header .logo a {
 
 #resume .timeline-header {
 	float: left;
-	width: 35%;
+	/* width: 35%; */
+	width: 50%;
 	padding-right: 90px;
 	text-align: right;
 }
@@ -1773,7 +1776,8 @@ header .logo a {
 	color: #888888;
 }
 #resume .timeline-content {
-	margin-left: 35%;
+	/* margin-left: 35%; */
+	margin-left: 50%;
 	padding-left: 60px;
 }
 #resume .timeline-content h4 {
@@ -1789,6 +1793,22 @@ header .logo a {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+}
+
+#resume .timeline-content-title {
+	padding-top: 0.2rem;
+	font-size: 1.9rem;
+}
+#resume .timeline-content-loc {
+	margin-bottom: 0;
+}
+#resume .timeline-content-date {
+	/* font-size: 1.3rem; */
+    font-family: 'poppins-regular';
+    font-weight: 600;
+    color: #FF0077;
+    margin-bottom: 2.5rem;
+    text-transform: none;
 }
 
 /**
@@ -1855,12 +1875,12 @@ header .logo a {
 		left: 1.8rem;
 	}
 	#resume .timeline-ico {
-		height: 3.6rem;
-		width: 3.6rem;
-		line-height: 3.6rem;
+		/* height: 3.6rem; */
+		/* width: 3.6rem; */
+		/* line-height: 3.6rem; */
 		left: 1.8rem;
-		margin-left: -1.8rem;
-		font-size: 1.5rem;
+		/* margin-left: -1.8rem; */
+		/* font-size: 1.5rem; */
 	}
 	#resume .timeline-header, #resume .timeline-content {
 		padding-left: 5.5rem;
