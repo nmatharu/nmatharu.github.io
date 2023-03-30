@@ -1779,7 +1779,8 @@ header .logo a {
 #resume .timeline-content {
 	/* margin-left: 35%; */
 	margin-left: 50%;
-	padding-left: 60px;
+	/* padding-left: 60px; */
+	padding-left: 90px;
 }
 #resume .timeline-content h4 {
 	position: relative;
@@ -1805,19 +1806,12 @@ header .logo a {
 	margin-bottom: 0;
 }
 #resume .timeline-content-date {
-	/* font-size: 1.3rem; */
+	font-size: 1.3rem;
     font-family: 'poppins-regular';
     font-weight: 600;
     color: #FF0077;
     margin-bottom: 4rem;
-    text-transform: none;
-}
-#resume .timeline-content-date-school {
-    font-family: 'poppins-regular';
-    font-weight: 600;
-    color: #FF0077;
-    margin-bottom: 1.5rem;
-    text-transform: none;
+    /* text-transform: none; */
 }
 #resume .timeline-content-date-school::after {
 	content: "";
@@ -1886,6 +1880,28 @@ header .logo a {
 	}
 	#resume .timeline-header, #resume .timeline-content {
 		padding-left: 7rem;
+	}
+	#resume .timeline-content-title {
+		margin-bottom: 0;
+		padding-top: 0.65rem;
+		font-size: 1.9rem;
+	}
+	/* #resume .timeline-content-title::after {
+		content: "";
+		display: block;
+		height: 2px;
+		width: 100px;
+		background: rgba(0, 0, 0, 0.1);
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	} */
+	#resume .timeline-content-loc {
+		font-family: "poppins-regular";
+		margin-top: 0.2rem;
+	}
+	#resume .timeline-content-date {
+		margin-top: 0.5rem;
+		margin-bottom: 4rem;
 	}
 }
 @media only screen and (max-width:480px) {
