@@ -1802,7 +1802,7 @@ header .logo a {
 	font-size: 1.9rem;
 }
 #resume .timeline-content-loc {
-	/* margin-top: -0.35rem; */
+	margin-top: 0.15rem;
 	margin-bottom: 0;
 }
 #resume .timeline-content-date {
@@ -1812,6 +1812,9 @@ header .logo a {
     color: #FF0077;
     margin-bottom: 4rem;
     /* text-transform: none; */
+}
+#resume .timeline-content-date-school {
+	margin-bottom: 2rem !important;
 }
 #resume .timeline-content-date-school::after {
 	content: "";
@@ -1824,6 +1827,9 @@ header .logo a {
 	/* position: absolute; */
 	/* left: 0;
 	bottom: 0; */
+}
+#resume .timeline-school-desc {
+	font-size: 1.4rem;
 }
 
 /**
