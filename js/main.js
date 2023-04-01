@@ -201,7 +201,7 @@
     	$('html, body').stop().animate({
        	'scrollTop': $target.offset().top
       }, 800, 'swing', function () {
-      	window.location.hash = target;
+      	// window.location.hash = target;
       });
 
   	});  
@@ -216,7 +216,7 @@
 	   $('html, body').stop().animate({
 		  'scrollTop': $target.offset().top + 10
 	 }, 800, 'swing', function () {
-		 window.location.hash = target + 10;
+		//  window.location.hash = target + 10;
 		//  window.location.hash = target;
 	 });
 
