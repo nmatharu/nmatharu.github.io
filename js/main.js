@@ -130,8 +130,8 @@
    });
 
    $(document).on('click', '.popup-modal-dismiss', function (e) {
-   	e.preventDefault();
-   	$.magnificPopup.close();
+		e.preventDefault();
+		$.magnificPopup.close();
    });
 
 	
@@ -201,7 +201,7 @@
     	$('html, body').stop().animate({
        	'scrollTop': $target.offset().top
       }, 800, 'swing', function () {
-      	// window.location.hash = target;
+      	window.location.hash = target;
       });
 
   	});  
@@ -216,7 +216,10 @@
 	   $('html, body').stop().animate({
 		  'scrollTop': $target.offset().top + 10
 	 }, 800, 'swing', function () {
-		//  window.location.hash = target + 10;
+			var scrollmem = $('html,body').scrollTop();
+			window.location.hash = target;
+			$('html,body').scrollTop(scrollmem);
+		 	// window.location.hash = target;
 		//  window.location.hash = target;
 	 });
 
