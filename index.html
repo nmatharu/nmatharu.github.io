@@ -38,6 +38,16 @@
 	<meta property="og:image" content="images/ogimage.jpg" />
 	<!-- <meta property="og:url" content="" /> -->
 
+	<script>
+		if (window.location.hash) {
+			// remove the hash from the URL
+			window.history.replaceState(null, null, window.location.href.split('#')[0]);
+			// remove the remaining '#' from the URL
+			window.history.replaceState(null, null, window.location.href.slice(0, -1));
+		//   window.location.hash = "";
+		}
+	</script>
+
 </head>
 
 <body id="top">
@@ -153,9 +163,22 @@
    		<div class="col-six tab-full">
 
    			<h3>Profile</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla 
-				in non ut esse in magna sint minim officia consectetur 
-				nisi commodo ea magna pariatur nisi cillum.</p>
+   			<p class="about-profile-desc">I studied Interactive Arts & Technology (major) and Computing Science (minor) 
+				at Simon Fraser University. I was immediately hooked on writing code from the first programming class I took.</p>
+				
+			<p class="about-profile-desc">I'm also constantly working on my creative skills— 3D modelling, animating,
+				designing games, writing music, etc. and ultimately combining those things with my programming skills to develop games.
+			</p>
+
+			<!-- <p class="about-profile-desc">The IAT program also exposed me to a TON of multidisciplinary project work, from UX design to 
+				app development to film to video games. I'm always learning and refining my creative abilities— 3D modelling, animating,
+				designing games, writing music, and more. Being able to combine those things with my dev skills to create video games has 
+				been a treat.
+			</p> -->
+
+			<!-- <p class="about-profile-desc">I also love to learn to CREATE—
+				3D modelling, animating, designing games, writing music, and combining those things with my dev skills.</p>   -->
+			<p>Beyond projects, I've worked as a co-op software developer at a few companies during my degree and I'm fond of working with students in academia.</p>
 
    			<!-- <ul class="info-list">
    				<li>
@@ -187,36 +210,56 @@
    		<div class="col-six tab-full">
 
    			<h3>Skills</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco 
-				nulla in non ut esse in magna sint minim officia 
-				consectetur nisi commodo ea magna pariatur nisi cillum.
-				Lorem ipsum Qui veniam ut consequat ex ullamco 
-				nulla in non ut esse in magna sint minim officia 
-				consectetur nisi commodo ea magna pariatur nisi cillum.</p>
 
+			<h5 class="about-skill-header">Languages</h5>
+			<!-- <div class="row">
+				<div class="col-six">
+					<ul class="skill-bars">
+						<li><div class="progress percent90"></div><strong>HTML5</strong></li>
+						<li><div class="progress percent90"></div><strong>HTML5</strong></li>
+					 </ul> 
+				</div>
+			</div> -->
+
+			<p class="about-skill-desc">
+				Java, C#, Python, C, C++, SQL, JavaScript, PHP, Haskell, HTML/CSS
+			</p>
+			
+			<h5 class="about-skill-header">Technologies</h5>
+   			<p class="about-skill-desc">
+				Unity, Git, Processing, Bootstrap, AWS Lightsail, Android Studio, Couchbase (NoSQL DB)
+			</p>
+
+			<h5 class="about-skill-header">Creativity</h5>
+   			<p class="about-skill-desc">
+				Photoshop, Blender, FL Studio, After Effects
+			</p>
+
+			
+				
 				<!-- <ul class="skill-bars">
-				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>HTML5</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent85"><span>85%</span></div>
-				   	<strong>CSS3</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent70"><span>70%</span></div>
-				   	<strong>JQuery</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent95"><span>95%</span></div>
-				   	<strong>PHP</strong>
-				   </li>
-				   <li>
+					<li>
+						<div class="progress percent90"><span>90%</span></div>
+						<strong>HTML5</strong>
+					</li>
+					<li>
+						<div class="progress percent85"><span>85%</span></div>
+						<strong>CSS3</strong>
+					</li>
+					<li>
+						<div class="progress percent70"><span>70%</span></div>
+						<strong>JQuery</strong>
+					</li>
+					<li>
+						<div class="progress percent95"><span>95%</span></div>
+						<strong>PHP</strong>
+					</li>
+					<li>
 
-				   	<div class="progress percent75"><span>75%</span></div>
-				   	<strong>Wordpress</strong>
-				   </li>
-      
+						<div class="progress percent75"><span>75%</span></div>
+						<strong>Wordpress</strong>
+					</li>
+	
 				</ul>  -->
 				<!-- /skill-bars -->		
 
@@ -227,7 +270,10 @@
    	<div class="row button-section">
    		<div class="col-twelve">
    			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
-			<a href="https://www.linkedin.com/in/nmatharu/" target="_blank" rel="noopener noreferrer" class="button button-primary">LinkedIn</a>
+			<a href="#services" class="button button-primary smoothscrollpad">Projects
+				<i class="fa-solid fa-angle-down"></i>
+			</a>
+			<!-- <a href="https://www.linkedin.com/in/nmatharu/" target="_blank" rel="noopener noreferrer" class="button button-primary">LinkedIn</a> -->
    		</div>   		
    	</div>
 
@@ -457,9 +503,9 @@
 					<!-- </div>  -->
 					<!-- /folio-item -->
 
-					<a class="button button-primary no-x-margins" href="https://youtu.be/api3BcNiXGQ" 
+					<a class="button button-primary no-x-margins" href="https://www.youtube.com/watch?v=api3BcNiXGQ" 
 						target="_blank" rel="noopener noreferrer" title="">Trailer
-						<!-- <i class="fa-solid fa-circle-play"></i> -->
+						<i class="fa-solid fa-circle-play"></i>
 					</a>
 	         		
 	         	</div> 	 
@@ -470,16 +516,29 @@
 						<img src="images/test.webp" alt="" />
 					</div>      	
 
-				  	<div class="description-box">
-					 <h4>The Odyssey</h4>		      
-					 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+					<!-- <div class="owl-carousel owl-theme">
+						<img src="images/test.webp" alt="" />
+						<img src="images/test.webp" alt="" />
+						<img src="images/test.webp" alt="" />
+					</div> -->
 
-					 <div class="categories">Web Development</div>			               
+				  	<div class="description-box">
+						<h4>The Odyssey</h4>		      
+						<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+						<div class="categories">This part of portfolio still under construction!</div>	
+							
+						<!-- <a class="button button-primary no-x-margins" href="https://youtu.be/api3BcNiXGQ" 
+							target="_blank" rel="noopener noreferrer" title="">Trailer
+						</a> -->
 				  	</div>
 
 					<div class="link-box">
-				   	<a href="http://www.behance.net">Details</a>
-					<a href="#" class="popup-modal-dismiss">Close</a>
+				   		<a href="https://navgl.itch.io/the-odyssey" target="_blank" rel="noopener noreferrer" style="width: 33%;">Play
+							<i class="fa-solid fa-gamepad"></i></a>
+						<a href="https://www.youtube.com/watch?v=api3BcNiXGQ" target="_blank" rel="noopener noreferrer" style="width: 33%;">Trailer
+							<i class="fa-solid fa-circle-play"></i></a>
+						<a href="#" class="popup-modal-dismiss" style="width: 34%;">Close</a>
 					</div>		      
 			  	</div> <!-- /modal-01 -->
 
@@ -512,9 +571,10 @@
 					<!-- </div>  -->
 					<!-- /folio-item -->
 
+
 					<a class="button button-primary no-x-margins" href="https://www.youtube.com/watch?v=CL6qpOlVP8I" 
 						target="_blank" rel="noopener noreferrer" title="">Trailer
-						<!-- <i class="fa-solid fa-circle-play"></i> -->
+						<i class="fa-solid fa-circle-play"></i>
 					</a>
 	         		
 	         	</div> 	 
@@ -569,9 +629,9 @@
 					<!-- </div>  -->
 					<!-- /folio-item -->
 
-					<a class="button button-primary smoothscroll no-x-margins" href="#about" title="">
-						Trailer
-						<!-- <i class="fa-solid fa-circle-play"></i> -->
+					<a class="button button-primary no-x-margins" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+						target="_blank" rel="noopener noreferrer" title="">Trailer
+						<i class="fa-solid fa-circle-play"></i>
 					</a>
 	         		
 	         	</div> 	 
@@ -626,11 +686,6 @@
 					<!-- </div>  -->
 					<!-- /folio-item -->
 
-					<a class="button button-primary smoothscroll no-x-margins" href="#about" title="">
-						Trailer
-						<!-- <i class="fa-solid fa-circle-play"></i> -->
-					</a>
-	         		
 	         	</div> 	 
 				
 

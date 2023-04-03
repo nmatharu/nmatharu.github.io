@@ -56,6 +56,23 @@
         navigationText: false
     });
 
+	// $('.owl-carousel').owlCarousel({
+	// 	loop:true,
+	// 	margin:10,
+	// 	nav:true,
+	// 	responsive:{
+	// 		0:{
+	// 			items:1
+	// 		},
+	// 		600:{
+	// 			items:3
+	// 		},
+	// 		1000:{
+	// 			items:5
+	// 		}
+	// 	}
+	// })
+
 
 	/*----------------------------------------------------- */
 	/* Alert Boxes
@@ -124,7 +141,7 @@
       type:'inline',
       fixedContentPos: false,
       removalDelay: 300,
-      showCloseBtn: false,
+    //   showCloseBtn: false,
       mainClass: 'mfp-fade'
 
    });
@@ -215,7 +232,7 @@
 
 	   $('html, body').stop().animate({
 		  'scrollTop': $target.offset().top + 10
-	 }, 800, 'swing', function () {
+	 	}, 800, 'swing', function () {
 			var scrollmem = $('html,body').scrollTop();
 			window.location.hash = target;
 			$('html,body').scrollTop(scrollmem);
