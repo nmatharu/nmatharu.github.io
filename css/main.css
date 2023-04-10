@@ -131,6 +131,47 @@ body {
 	background: transparent;
 }
 
+/* Modal scrollbar */
+/* Firefox */
+.description-box {
+    scrollbar-width: auto;
+    scrollbar-color: #2e2e2e transparent;
+}
+
+.description-box::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+}
+.description-box::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+.description-box::-webkit-scrollbar-thumb {
+	background: #00000033;
+    border: 5px solid #ffffff;
+}
+.description-box::-webkit-scrollbar-thumb:hover {
+	background: #00000066;
+}
+.description-box::-webkit-scrollbar-thumb:active {
+	background: #bf3131;
+}
+.description-box::-webkit-scrollbar-track {
+	background: #ffffff00;
+	border-radius: 100px;
+}
+.description-box::-webkit-scrollbar-track:hover {
+	background: #66666600;
+}
+.description-box::-webkit-scrollbar-track:active {
+	background: #33333300;
+}
+.description-box::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+
+
 /**
  * links - (_document-setup.scss)
  * -------------------------------------------------------------------
@@ -2071,6 +2112,8 @@ header .logo a {
 	vertical-align: bottom;
 }
 .popup-modal .description-box {
+	overflow-y: scroll;
+	max-height: 60vh;
 	padding: 1.8rem 3.6rem 3rem;
 }
 .popup-modal .description-box h4 {
