@@ -141,7 +141,7 @@
 	$('.item-wrap a').magnificPopup({
 
 		type: 'inline',
-		fixedContentPos: false,
+		fixedContentPos: true,
 		removalDelay: 300,
 		autoFocusLast: false,
 		//   showCloseBtn: false,
