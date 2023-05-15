@@ -2389,6 +2389,13 @@ h3.portfolio-service-title {
 .portfolio-service-desc {
 	font-size: 1.4rem;
 }
+.portfolio-modal-title {
+	padding-top: 1rem;
+}
+.portfolio-modal-image {
+	margin-top: 8px;
+	margin-bottom: 24px;
+}
 .more-button-wrapper {
 	display: contents;
 }
