@@ -579,7 +579,7 @@
 
 					<!-- <div class="bgrid folio-item"> -->
 					<div class="item-wrap more-button-wrapper">
-						<a class="button stroke no-x-margins" href="#modal-01" title="">More</a>
+						<a class="button stroke no-x-margins" href="#modal-02" title="">More</a>
 					</div>	               
 					<!-- </div>  -->
 					<!-- /folio-item -->
@@ -593,24 +593,51 @@
 	         	</div> 	 
 				
 
-				<div id="modal-01" class="popup-modal slider mfp-hide">	
-
-					<div class="media">
-						<img src="images/test.webp" alt="" />
-					</div>      	
-
+				 <div id="modal-02" class="popup-modal slider mfp-hide">	
 				  	<div class="description-box">
-					 <h4>The Odyssey</h4>		      
-					 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+						<!-- <h5>Context</h5> -->
+						<!-- <p>IAT 410: Advanced Game Design</p>	 -->
+						<h5 class="portfolio-modal-title">Defenders of Delta</h5>
+						<p>Defenders of Delta was a personal project I developed during the summer and was my first Unity game! Coming from a Java background, I felt right at home with C#, I just had to get over the hurdles of learning how to use the interface and how Unity's systems work with each other. This is a tower defense game with a playable character that has to physically place towers and get in the action with their own bullets as well.</p>
+						<p>In terms of features, I didn't want to get too into the weeds of learning 3D for this project, so I settled with creating some basic voxel models with little animation. There are multiple types of turrets and power-ups to buy, as well as good enemy variety. Down the path you'll see enemies that shoot back at you, cheat by cutting across the path, hack your turrets to shoot back at you, cast spells, can only be destroyed by bombs, and more!</p>
+						<img src="images/modals/dd/title.jpg" alt="" class="portfolio-modal-image">
+						<p>The thing I'm most happy about with this project is actually the original soundtrack and custom C# dynamic audio implementation. There are 8 different pieces of music, each with 3 different segments: a “chill” arrangement that plays between waves of enemies, the “main” tune that plays during the action, and a transitional jingle that musically links back to the “chill” arrangement. Calculations using the playback time and tempo of the music are used to sync the start/stop of music pieces to seamlessly playback different pieces of music at appropriate times during the game. Here's an example set:</p>
+						
+						<div class="row">
+							<h6>F_Chill.ogg</h6>
+							<audio controls style="width: 100%;">
+								<source src="images/modals/dd/F_Chill.ogg" type="audio/ogg">
+									Your browser does not support the audio element.
+							</audio>
+							<h6>F_Main.ogg</h6>
+							<audio controls style="width: 100%;">
+								<source src="images/modals/dd/F_Main.ogg" type="audio/ogg">
+								Your browser does not support the audio element.
+							</audio>
+							<h6>F_Trans.ogg</h6>
+							<audio controls style="width: 100%; margin-bottom: 1rem;">
+								<source src="images/modals/dd/F_Trans.ogg" type="audio/ogg">
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+						
+						
+						
 
-					 <div class="categories">Web Development</div>			               
+						<p>Compared to others I've made, this game is surprisingly addictive— try it here!</p>
+
+						<div style="text-align: center; margin-top: 3rem;">
+							<a href="https://navgl.itch.io/defenders-of-delta" 
+								target="_blank" rel="noopener noreferrer" title="" class="button stroke">Play&nbsp;<i class="fa-solid fa-gamepad"></i></a>
+						</div>
 				  	</div>
 
 					<div class="link-box">
-				   	<a href="http://www.behance.net">Details</a>
-					<a href="#" class="popup-modal-dismiss">Close</a>
-					</div>		      
-			  	</div> <!-- /modal-01 -->
+						<a href="https://www.youtube.com/watch?v=CL6qpOlVP8I" target="_blank" rel="noopener noreferrer">Trailer
+							<i class="fa-solid fa-circle-play"></i></a>
+						<a href="#" class="popup-modal-dismiss">Close</a>
+					</div>	
+				</div>
 
 
 			</div> <!-- /service -->
