@@ -150,6 +150,7 @@
 	});
 
 	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		document.querySelectorAll('audio').forEach(el => el.pause());
 		e.preventDefault();
 		$.magnificPopup.close();
 	});
@@ -212,7 +213,7 @@
 	/* Smooth Scrolling
 	------------------------------------------------------ */
 	$('.smoothscroll').on('click', function (e) {
-		console.log("things are happening");
+		// console.log("things are happening");
 
 		e.preventDefault();
 
@@ -230,7 +231,7 @@
 	});
 
 	$('.smoothscrollpad').on('click', function (e) {
-		console.log("things are happening2 ");
+		// console.log("things are happening2 ");
 
 		e.preventDefault();
 		// return;
