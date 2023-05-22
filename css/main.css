@@ -2585,6 +2585,96 @@ header .logo a {
 	}
 }
 
+/*
+	Duel-Net modal dice
+*/
+
+.rules-dice-backdrop {
+    perspective: 2000px;
+    perspective-origin: center;
+}
+
+.rules-game-dice-atk {
+    position: absolute;
+    margin-top: 5px;
+    transform-origin: 50px 50px 0px;
+    transform-style: preserve-3d;
+    animation: constantDiceRotAtk 6s linear infinite;
+    transform: scale(0.75);
+}
+
+.rules-game-dice-def {
+    position: absolute;
+    margin-top: 5px;
+    transform-origin: 50px 50px 0px;
+    transform-style: preserve-3d;
+    animation: constantDiceRotDef 6s linear infinite;
+    transform: scale(0.75);
+}
+
+.rules-game-dice-atk > img, .rules-game-dice-def > img {
+    position: absolute;
+}
+
+.game-dice {
+    position: absolute;
+    top: 50px;
+    /* left: 400px; */
+    transform-origin: 50px 50px 0px;
+    transform-style: preserve-3d;
+    transition: transform 0.75s ease-out;
+}
+
+.game-dice img {
+    position: absolute;
+}
+
+.game-dice-front {
+    transform: translateZ(50px);
+}
+
+.game-dice-back {
+    transform: rotateX(-180deg) translateZ(50px);
+}
+
+.game-dice-right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.game-dice-left {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.game-dice-top {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.game-dice-bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.rules-dice-backdrop img {
+	max-width: none;
+}
+
+@keyframes constantDiceRotAtk {
+    0% {
+        transform: scale(0.75) rotateX(0deg) rotateY(0deg) rotateZ(180deg);
+    }
+    100% {
+        transform: scale(0.75) rotateX(360deg) rotateY(720deg) rotateZ(180deg);
+    }
+}
+
+@keyframes constantDiceRotDef {
+    0% {
+        transform: scale(0.75) rotateX(360deg) rotateY(720deg) rotateZ(0deg);
+    }
+    100% {
+        transform: scale(0.75) rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+    }
+}
+
 /**
  * transition effect for modal popup - (_layout.scss)
  * ------------------------------------------------------------------ 
