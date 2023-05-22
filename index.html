@@ -593,7 +593,7 @@
 	         	</div> 	 
 				
 
-				 <div id="modal-02" class="popup-modal slider mfp-hide">	
+				<div id="modal-02" class="popup-modal slider mfp-hide">	
 				  	<div class="description-box">
 						<!-- <h5>Context</h5> -->
 						<!-- <p>IAT 410: Advanced Game Design</p>	 -->
@@ -662,7 +662,7 @@
 
 					<!-- <div class="bgrid folio-item"> -->
 					<div class="item-wrap more-button-wrapper">
-						<a class="button stroke no-x-margins" href="#modal-01" title="">More</a>
+						<a class="button stroke no-x-margins" href="#modal-03" title="">More</a>
 					</div>	               
 					<!-- </div>  -->
 					<!-- /folio-item -->
@@ -675,24 +675,28 @@
 	         	</div> 	 
 				
 
-				<div id="modal-01" class="popup-modal slider mfp-hide">	
+				 <div id="modal-03" class="popup-modal slider mfp-hide">	
+					<div class="description-box">
+						<h5 class="portfolio-modal-title">Scribbage</h5>
+						<p>Probably the most technically complex project here is Scribbage. It was heavily inspired by the Jackbox Party Pack series: web-enabled party games typically played with phones that allow for rich user interaction with the game. I wanted to create a game where players could draw original characters on their phones and watch them battle each other on the big screen. The project consists of three separate applications: the desktop game that provides the visual experience to the players, the web-app that players use on their phones to connect to the game, and a server application that facilitates game instances.</p>
+						<!-- <img src="images/modals/dd/title.jpg" alt="" class="portfolio-modal-image"> -->
+						<h6 style="margin-bottom: 1rem;">Web-App</h6>
+						<p>To connect to the game, players navigate to a static webpage styled using Bootstrap and written in plain JS that connects to the aforementioned server application using a websocket. This page allows players to join the game with a particular room code and player name, and once the game begins, players can draw a roster of characters to fight with, specifying their names, stats, and more.</p>
+						<h6 style="margin-bottom: 1rem;">Desktop Game</h6>
+						<img src="images/modals/sc/join.jpg" alt="" class="portfolio-modal-image">
+						<p>The visual experience comes from a desktop game written in Java which uses Processing as a graphics library and websockets to connect to the server app. No game engine was used. The desktop game sends and receives data from the server, such as for creating a game instance, receiving a unique room code to display on the screen, and getting the image data for the characters users draw. The game shows the characters battle to death with turn-based combat in an up to 16-player double elimination tournament bracket where players can sit back and cheer for their original, often goofy creations.</p>
+						<h6 style="margin-bottom: 1rem;">Server</h6>
+						<p>Joining our two above programs together is the server application, written in Java using websockets and currently hosted on an AWS Lightsail instance. It’s a generic application that can be used for any web-enabled party game, not just Scribbage. It allows games to send room creation requests, supplying them with a unique code that can be shown on screen for the players to enter when connecting on their phones. The user applications can connect to these instances, allowing the server to facilitate communication between the user devices and the game. The server permits the game to broadcast data to all players or unicast to individual players, allows “dangling players” to reconnect to the game if their connection is lost, and provides a set of success and error codes (e.g. name in use, lobby doesn’t exist, player limit reached, game lobby closed, etc.).</p>
+						<hr style="margin-bottom: 2.5rem;">
+						<p>My friends have had a blast playing this game and I was really happy with the technical feat I had accomplished at the time. For release to the public, I would like to rewrite this game in Unity for the sake of performance and ease of adding new features, as well as touching up the server application to be more scalable and secure. Maybe a project for the near future!</p>
+					</div>
 
-					<div class="media">
-						<img src="images/test.webp" alt="" />
-					</div>      	
-
-				  	<div class="description-box">
-					 <h4>The Odyssey</h4>		      
-					 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-
-					 <div class="categories">Web Development</div>			               
-				  	</div>
-
-					<div class="link-box">
-				   	<a href="http://www.behance.net">Details</a>
-					<a href="#" class="popup-modal-dismiss">Close</a>
-					</div>		      
-			  	</div> <!-- /modal-01 -->
+				  <div class="link-box">
+					  <a href="https://www.youtube.com/watch?v=CL6qpOlVP8I" target="_blank" rel="noopener noreferrer">Trailer
+						  <i class="fa-solid fa-circle-play"></i></a>
+					  <a href="#" class="popup-modal-dismiss">Close</a>
+				  </div>	
+			  </div>
 
 
 			</div> <!-- /service -->
