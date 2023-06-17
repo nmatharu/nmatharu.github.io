@@ -1002,6 +1002,10 @@ button.stroke,
 	line-height: 4.8rem;
 }
 
+.modal-more-button {
+	color: white !important;
+}
+
 button.stroke.medium,
 .button.stroke.medium {
 	line-height: 5.1rem !important;
@@ -2586,7 +2590,18 @@ header .logo a {
 	Duel-Net modal dice
 */
 
+.dice-backdrop-row {
+	padding-top: 1.25rem;
+	padding-bottom: 2rem;
+}
+
+.dice-backdrop-row > .col-six {
+	position: relative;
+}
+
 .rules-dice-backdrop {
+	position: absolute;
+	left: 25%;
     perspective: 2000px;
     perspective-origin: center;
 }
