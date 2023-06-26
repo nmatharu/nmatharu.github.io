@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Navpreet Matharu</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+	<script src="https://kit.fontawesome.com/ee0cedbd05.js" crossorigin="anonymous"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<!-- open graph
+	================================================== -->
+	<meta property="og:title" content="Navpreet Matharu — Portfolio" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://nmatharu.ca/images/ogimage.jpg" />
+	<!-- <meta property="og:url" content="" /> -->
+
+	<script>
+		if (window.location.hash) {
+			// remove the hash from the URL
+			window.history.replaceState(null, null, window.location.href.split('#')[0]);
+			// remove the remaining '#' from the URL
+			window.history.replaceState(null, null, window.location.href.slice(0, -1));
+		//   window.location.hash = "";
+		}
+
+		function mapVal(value, istart, istop, ostart, ostop) {
+    		return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+		}
+
+		function pickHex(color1, color2, weight) {
+			var w1 = weight;
+			var w2 = 1 - w1;
+			var rgb = [Math.round(color1[0] * w1 + color2[0] * w2),
+				Math.round(color1[1] * w1 + color2[1] * w2),
+				Math.round(color1[2] * w1 + color2[2] * w2)];
+			return rgb;
+		}
+
+		function hCalculate() {
+			var hs1 = Number(document.getElementById("hspeed1").value);
+			var hs2 = Number(document.getElementById("hspeed2").value);
+			var hp = Number(document.getElementById("hhealth").value);
+			var height = Number(document.getElementById("hheight").value);
+			var height16 = Number(document.getElementById("hheight16ths").value);
+
+			var output = document.getElementById("horseScore");
+			var outputUW = document.getElementById("horseScoreUW");
+			document.getElementById("horseScoreDiv").style.display = "block";
+
+			var MIN_SPEED = 160;
+			var MAX_SPEED = 53;
+			var MIN_HP = 7.5;
+			var MAX_HP = 15;
+			var MIN_JUMP = 1.5;
+			var MAX_JUMP = 5.25;
+
+			var SPEED_WEIGHT = 6;
+			var JUMP_WEIGHT = 3;
+			var HP_WEIGHT = 1;
+
+			var speedScore = mapVal(hs1+hs2, MAX_SPEED, MIN_SPEED, SPEED_WEIGHT, 0);
+			var hpScore = mapVal(hp, MIN_HP, MAX_HP, 0, HP_WEIGHT);
+			var heightScore = mapVal(height + height16/16, MIN_JUMP, MAX_JUMP, 0, JUMP_WEIGHT);
+
+			var calcScore = speedScore + hpScore + heightScore;
+			var outMax = SPEED_WEIGHT + JUMP_WEIGHT + HP_WEIGHT;
+			var normalizedScore = calcScore / outMax;
+			var MAX_SCORE = 100;
+
+			var BAD_COLOR = [ 139, 0, 0 ];
+			var MID_COLOR = [ 255, 174, 66 ];
+			var GOOD_COLOR = [ 0, 255, 255 ];
+
+			var scoreColor;
+			if( normalizedScore <= 0.5 ) {
+				scoreColor = pickHex( MID_COLOR, BAD_COLOR, normalizedScore * 2 );
+			}
+			if( normalizedScore > 0.5 ) {
+				scoreColor = pickHex( GOOD_COLOR, MID_COLOR, ( normalizedScore - 0.5 ) * 2 );
+			}
+
+			output.innerHTML = Math.round(normalizedScore * MAX_SCORE); 
+			output.style.color = `rgb(${scoreColor[0]}, ${scoreColor[1]}, ${scoreColor[2]})`;
+
+			var unweightedScore = speedScore/SPEED_WEIGHT + hpScore/HP_WEIGHT + heightScore/JUMP_WEIGHT;
+			unweightedScore = Math.round( 100 * unweightedScore / 3 );
+			outputUW.innerHTML = "Raw: " + unweightedScore;
+
+			if(output.innerHTML == "100") {
+				output.innerHTML = "100!";
+				document.getElementById("scoreheadertext").innerHTML = "We have achieved perfection.";
+			}
+
+			document.getElementById("hgif").style.display = "none";
+		}
+	</script>
+
+	<style>
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		.hrscol {
+			padding: 0;
+		}
+
+		.hrscol > h3 {
+			padding-top: 1.25rem;
+		} 
+
+		h4 {
+			color: #888888;
+			margin-bottom: 0;
+		}
+
+		input {
+			width: 100%;
+			color: white !important;
+			font-size: 2rem !important;
+			text-align: center;
+		}
+
+		.hbutton {
+			border: 3px solid white !important;
+			color: white !important;
+		}
+
+		.hbutton:hover {
+			border: 3px solid #FF0077 !important;
+			color: #FF0077 !important;
+		}
+
+		.outh {
+			padding-top: 1rem;
+			font-size: 8rem !important;
+			/* color: #FF0077 !important; */
+		}
+
+		.outhu {
+			padding: 0 !important;
+		}
+
+		#hgif {
+			width: 30%;
+		}
+	</style>
+
+</head>
+
+<body id="top">
+
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+		<h5>Horse</h5>
+		<h1>Horse.</h1>
+		<br><br>
+   		<div class="col-four">
+			<h4>Speed</h4>
+			<h6>(X + Y)</h6>
+			<div class="row">
+				<div class="col-five hrscol"><input type="number" id="hspeed1" min="53" max="160" value="0"></div>
+				<div class="col-two hrscol"><h3>+</h3></div>
+				<div class="col-five hrscol"><input type="number" id="hspeed2" min="53" max="160" value="0"></div>
+			</div>
+			
+   		</div> 
+		<div class="col-four">
+			<h4>Health</h4>
+			<h6>(X hearts)</h6>
+			<input type="number" id="hhealth" min="53" max="160" value="0">
+   		</div>
+		<div class="col-four">
+			<h4>Jump Height</h4>
+			<h6>(X + Y/16)</h6>
+			<div class="row">
+				<div class="col-five hrscol"><input type="number" id="hheight" min="53" max="160" value="0"></div>
+				<div class="col-two hrscol"><h3>+</h3></div>
+				<div class="col-five hrscol"><input type="number" id="hheight16ths" min="53" max="160" value="0"></div>
+			</div>
+   		</div>      
+
+		<br><br>
+		<a class="button stroke hbutton" onclick="hCalculate()">Calculate</a>
+
+		<br><br><br>
+		<div id="horseScoreDiv" style="display: none;">
+			<h4 id="scoreheadertext">Horse Score:</h4>
+			<h1 id="horseScore" class="outh"></h1>
+			<h3 id="horseScoreUW" class="outhu"></h3>
+		</div>		
+
+		<img id="hgif" src="images/h.gif" alt="" />
+
+   	</div>
+	<!-- /section-intro -->
+		
+	</section> <!-- /services -->	
+
+   <div id="preloader"> 
+    	<div id="loader">
+			<!-- <h5 class="loading-gifs">Sorry, loading gifs!</h5> -->
+		</div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
